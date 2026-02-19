@@ -2986,3 +2986,17 @@ Returns the result of bitwise exclusive or'ing `i1` with `i2`.
 (xor 1 2) ;; Returns 3
 (xor 120 280) ;; Returns 352
 ```
+## stacks-block-time
+Introduced in: **Clarity 4**
+
+**input:** none  
+**output:** `uint`
+
+**description:**  
+Returns the timestamp of the current Stacks block as a Unix epoch time in seconds.  
+This value reflects the burn block time associated with the Stacks block and can be used for implementing time-based logic in smart contracts.
+
+**example:**
+```clarity
+(define-public (get-current-time)
+  (ok stacks-block-time))
